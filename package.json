@@ -1,0 +1,27 @@
+{
+  "name": "final_project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "food_tracker_app.js",
+  "scripts": {
+    "start": "parcel src/food_tracker_app.html",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Femi",
+  "license": "ISC",
+  "dependencies": {
+    "@skalwar/simple_number_formatter": "^1.0.1",
+    "babel-loader": "^7.1.5",
+    "chart.js": "^3.5.1",
+    "gh-pages": "^3.2.3",
+    "parcel": "^2.0.0-rc.0",
+    "parcel-bundler": "^1.9.4",
+    "snackbar": "^1.1.0"
+  },
+  "devDependencies": {
+    "@babel/preset-env": "^7.15.6",
+    "babel-core": "^6.26.3",
+    "babel-preset-env": "^1.7.0"
+  }
+}

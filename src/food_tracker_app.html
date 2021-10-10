@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="food_tracker_app.css" type="text/css">
+    <script type="module" src="food_tracker_app.js" ></script>
+    <link rel="shortcut icon" href="./img/apple-touch-icon.png" type="image/x-icon">
+    <title>Food Tracker App</title>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>My Nutrition</h1>
+        </header>
+    </div>
+<main>
+    <div class="container">
+        <h2>Select the Food and Add the item</h2>
+        <form id="form">
+            <select name="foodName" id="foodName">
+                <option value="Apple">Apple</option>
+                <option value="Burger">Burger</option>
+                <option value="Cider">Cider</option>
+                <option value="Pasta">Pasta</option>
+                <option value="Peach">Peach</option>
+                <option value="Soup">Soup</option>
+                <option value="Pizza">Pizza</option>
+            </select>
+            <div class="foodClassification" id="foodClassification">
+                <label for="carbohydrates">Carbohydrates</label>
+                <input id="carbohydrates" name="carbohydrates" type="number" placeholder="0g"/>
+    
+                <label for="protein">Protein</label>
+                <input id="protein" name="protein" type="number" placeholder="0g"/>
+    
+                <label for="fat">Fats</label>
+                <input id="fat" name="fat"  type="number" placeholder="0g"/>
+            </div>
+            <button type="submit">Add</button>
+            <!--<input type="submit" class="btn" value="Add" />-->
+
+        </form>
+        <div class="foodStatistics">
+            <h2>Statistics</h2>
+            <canvas id="myChart"></canvas>
+        </div>
+    
+        <div class="foodLog">
+            <h2>Food Log</h2>
+            <ul id="total"></ul>
+        </div>
+        <div>
+            <ul id="result">Result</ul>
+        </div>
+    </div>
+   
+   
+</main>
+
+</body>
+</html>
