@@ -1,7 +1,6 @@
-import { FetchWrapper } from "./fetch-wrapper"
+import { FetchWrapper } from "./fetch-wrapper";
 import snackbar from "snackbar";
-import "snackbar/dist/snackbar.min.css"
-//import foods from "./foods"
+import "snackbar/dist/snackbar.min.css";
 
 const form = document.querySelector('#form');
 const foodClassification = document.querySelector("#foodClassification");
@@ -9,13 +8,13 @@ const result = document.querySelector('#result');
 const total = document.querySelector('#total');
 const foodName = document.querySelector('#foodName');
 const carbohydrates = document.querySelector('#carbohydrates');
-const fat = document.queryCommandValue('#fat')
-const protein = document.queryCommandValue('#protein')
+const fat = document.queryCommandValue('#fat');
+const protein = document.queryCommandValue('#protein');
 
 
 //////////########## FetchWrapper ###########/////////// 
 let body = {
-    fields:{
+    fields: {
         foodName: {stringValue:foodName.value},
         carbohydrates: {integerValue:carbohydrates.value},
         protein: {integerValue:protein.value},
@@ -29,7 +28,7 @@ const API = new FetchWrapper(
 let testing = API.post("Adesola01", body);
 
 
-let json = API.get("Adesola01")
+let json = API.get("Adesola01");
 API.get().then((data)=>{
   
    
@@ -55,7 +54,7 @@ form.addEventListener('submit', function(event){
     resultDiv.classList.add('todoApp');
 
 
-//////////####  Get sum of Calories for each food classification ####/////////// 
+//////////####  Get sum of Calories for different food classification ####/////////// 
     let resultL = document.createElement('div')
     resultL.innerText=`${ carbsCal + proCal + fatCal
     } calories`;
@@ -131,7 +130,7 @@ form.addEventListener('submit', function(event){
     ctx.fillRect(x1,y1,bar_width,data[i][1]);// Filled bar 
 
     x = x + bar_gap
-    }
+    };
 
 //////////########## Post Data FetchWrapper ###########/////////// 
     API.post("Adesola01", {
@@ -174,11 +173,11 @@ form.addEventListener('submit', function(event){
 //////////####  class method to get sum of food calories ####/////////// 
 
 class foodCalories {
-    constructor(calories){
+    constructor(calories) {
         this.calories = calories;
     }
 
-    getSumOfCalories(){
+    getSumOfCalories() {
         let sum = 0;
         this.calories.forEach(function(calorie){
             sum = sum+calorie
@@ -197,8 +196,4 @@ function render(calories) {
     <div> Total calories Logged: ${stats.getSumOfCalories()} Calories </div>
     
     `;
-}
-
-
-
-
+};
